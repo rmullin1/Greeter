@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -52,6 +53,24 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
+    public void didTapGreetButton(View view) {
+        //get the existing greetEditText: persons name
+        EditText greetEditText = (EditText) findViewById(R.id.greet_edit_text);
+        String name = greetEditText.getText().toString();
+
+        //build Hello greeting and store to messageTextView field
+        String greeting = String.format("Hello, %s!", name);
+        TextView messageTextView = (TextView) findViewById(R.id.message_text_view);
+        messageTextView.setText(greeting);
+
+        //enable reverseButton after greetButton is clicked
+        Button reverseButton = (Button) findViewById(R.id.reverse_button);
+        reverseButton.setEnabled(true);
+
+    }//didTapGreetButton Handler
+
+/*
     public void didTapGreetButton(View view) {
         EditText greetEditText =
                 (EditText) findViewById(R.id.greet_edit_text);
@@ -59,8 +78,10 @@ public class MainActivity extends AppCompatActivity {
         String name = greetEditText.getText().toString();
         String greeting = String.format("Hello, %s!", name);
 
-        TextView messageTextView = (TextView) findViewById(R.id.message_text_view);
+        TextView messageTextView =
+                (TextView) findViewById(R.id.message_text_view);
 
         messageTextView.setText(greeting);
-    }//didTapGreetButton Handler
+    }
+*/
 }

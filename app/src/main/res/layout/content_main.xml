@@ -43,6 +43,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/message_text_view"
         android:layout_centerHorizontal="true"
-        />
+        android:enabled="false" />
 
 </RelativeLayout>
