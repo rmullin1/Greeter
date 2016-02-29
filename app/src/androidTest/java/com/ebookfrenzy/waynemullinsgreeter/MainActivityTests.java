@@ -44,6 +44,8 @@ public class MainActivityTests extends ActivityInstrumentationTestCase2<MainActi
         String actualText = greetMessage.getText().toString();
         assertEquals("Hello, Jake!", actualText);
 
+        //click the "Reverse" button
+
     }//testGreet()
 
 
