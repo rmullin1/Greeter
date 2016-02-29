@@ -70,18 +70,13 @@ public class MainActivity extends AppCompatActivity {
 
     }//didTapGreetButton Handler
 
-/*
-    public void didTapGreetButton(View view) {
-        EditText greetEditText =
-                (EditText) findViewById(R.id.greet_edit_text);
 
-        String name = greetEditText.getText().toString();
-        String greeting = String.format("Hello, %s!", name);
+    public void didTapReverseButton(View view) {
+        //get the existing message text, reverse it, and restore
+        TextView messageTextView = (TextView) findViewById(R.id.message_text_view);
+        StringBuilder sbMessage = new StringBuilder(messageTextView.getText());
+        messageTextView.setText(sbMessage.reverse().toString());
 
-        TextView messageTextView =
-                (TextView) findViewById(R.id.message_text_view);
+    }//didTapReverseButton Handler
 
-        messageTextView.setText(greeting);
-    }
-*/
 }
